@@ -1,0 +1,30 @@
+{%  extends "base.html" %}
+{% block title %} algebra form {% endblock %}
+{% block body %}
+      <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="form-container">
+          <h3 class="mb-4 text-center">simplifying equations</h3>
+          <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="x">Simplify:</label>
+              <input type="text" class="form-control" id="x" placeholder="Enter Equation to simplify" name="x">
+            </div>
+            <!-- <div class="form-group">
+              <label for="y">Y:</label>
+              <input type="text" class="form-control" id="y" placeholder="Enter Y">
+            </div>
+            <div class="form-group">
+              <label for="z">Z:</label>
+              <input type="text" class="form-control" id="z" placeholder="Enter Z">
+            </div> -->
+            <div class="text-center"> <!-- Center the submit button -->
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+          {% if result %}
+              <h4 class="mt-4 text-center">The answer is: {{ result }}</h4>
+          {% endif %}
+        </div>
+      </div>
+{% endblock %}

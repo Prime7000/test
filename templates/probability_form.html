@@ -1,0 +1,27 @@
+{%  extends "base.html" %}
+{% block title %} probability form {% endblock %}
+{% block body %}
+      <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="form-container">
+          <h3 class="mb-4 text-center">probability</h3>
+          <form method="post">
+            {% csrf_token %}
+
+            <div class="form-group">
+              <label for="x">Number of desired outcome:</label>
+              <input type="text" class="form-control" id="x" placeholder="Enter desired outcome" name="x">
+            </div>
+            <div class="form-group">
+              <label for="y">Total number of possible outcome:</label>
+              <input type="text" class="form-control" id="y" placeholder="Enter total outcome" name="y">
+            </div>
+            <div class="text-center"> <!-- Center the submit button -->
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+          {% if result %}
+              <h4 class="mt-4 text-center">The answer is: {{ result }}</h4>
+          {% endif %}
+        </div>
+      </div>
+{% endblock %}

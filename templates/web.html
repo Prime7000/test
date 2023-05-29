@@ -1,0 +1,78 @@
+{% extends "base.html"%}
+{% load static %}
+
+
+    {% block body%}
+      
+        
+
+              <!-- <div class="design">
+                  <h1>Hebrews.Ai</h1>
+              </div>
+      -->
+              <!-- <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+      -->
+          <div class="container">
+            <div class="col1 d-flex flex-column mb-3 pt-2">
+                  <div class="dcol shadow"> calculus</div>
+                  <div class="dcol shadow"> algebra </div>
+                  <div class="dcol shadow"> statistic </div>
+                  <div class="dcol shadow"> probability</div>
+            </div>
+            <div class="col2 logos">
+              <div class="image-grid box log">
+                  <div class="logo">
+                      <a href="{% url 'child:cal1' %}">
+                        <img src="{% static 'images/1-calculus.jpeg' %}" alt="" class="image">
+                      </a>
+                  </div>
+                  <div class="logo">
+                      <a href="{% url 'child:alg1'  %}">
+                        <img src="{% static 'images/algebra.jpeg' %}" alt="" class="image">
+                      </a>
+                  </div>
+                  <div class="logo">
+                      <a href="{% url 'child:pro1'  %}">
+                      <img src="{% static 'images/probability.jpg' %}" alt="" class="image">
+                      </a>
+                  </div>
+                  <div class="logo">
+                    <a href="{% url 'child:sta1'  %}">
+                      <img src="{% static 'images/statistics.jpeg' %}" alt="" class="image">
+                    </a>
+                  </div>
+                  <div class="logo">
+                    <a href="{% url 'child:cal2'%}">
+                      <img src="{% static 'images/calculus2.jpeg' %}" alt="" class="image">
+                    </a>
+                  </div>
+                  <div class="logo">
+                    <a href="{% url 'child:alg2'%}">
+                      <img src="{% static 'images/algebra2.jpg' %}" alt="" class="image">
+                    </a>
+                  </div>
+                  <div class="logo">
+                    <a href="{% url 'child:pro2'%}">
+                      <img src="{% static 'images/probability2.webp' %}" alt="" class="image">
+                    </a>
+                  </div>
+                  <div class="logo">
+                    <a href="{% url 'child:sta2'%}">
+                      <img src="{% static 'images/statics2.jpg' %}" alt="" class="image">
+                    </a>
+                  </div>
+              </div>
+
+              </div>
+            </div>
+
+    {% endblock %}
